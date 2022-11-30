@@ -20,7 +20,7 @@ def index(request):
     decoded_data=base64.b64decode((request.body))
     #write the decoded data back to original format in  file
     # DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880
-    img_name = f"../request_mages/image{2}.jpeg"
+    img_name = f"../request_mages/image{3}.jpeg"
     img_file = open(img_name, 'wb')
     img_file.write(decoded_data)
     img_file.close()
