@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-+a7!_bdrf2ll6#pd(+&6l+$y7f66oqcin5=6=a_8&0k!79duqw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1","localhost","blightdetectionai.netlify.app","blightai.herokuapp.com"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
