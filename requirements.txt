@@ -2,6 +2,6 @@ Django==4.1.1
 djangorestframework==3.13.1
 django-cors-headers
 gunicorn==20.1.0
-Pillow==9.2.0
+Pillow==9.3.0
 tensorflow-cpu
 whitenoise==6.2.0
