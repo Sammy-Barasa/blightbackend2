@@ -1,1 +1,1 @@
-web: sh -c 'cd CoreBackend && gunicorn --workers=3 blightcnncore.wsgi:application'
+web: sh -c 'cd CoreBackend && gunicorn blightcnncore.wsgi:application'
