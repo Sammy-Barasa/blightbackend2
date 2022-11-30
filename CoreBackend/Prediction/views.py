@@ -3,7 +3,7 @@ from rest_framework.decorators import api_view
 
 @api_view(["GET","POST"])
 def index(request):
-    prediction_classes = ["blight infected 5-7","blight infected day 1-3","blight infected day 3-5","blight infected day 7 onwards","healthy leaves"]
+    prediction_classes = ["null","blight infected 5-7","blight infected day 1-3","blight infected day 3-5","blight infected day 7 onwards","healthy leaves"]
     if request.method == "GET":
         print(request.data)
         
