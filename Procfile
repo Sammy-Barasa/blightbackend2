@@ -1,1 +1,1 @@
-web: sh -c 'cd CoreBackend && gunicorn blightcnncore.wsgi:application --log-file'
+web: sh -c 'cd CoreBackend && gunicorn blightcnncore.wsgi:application --log-file -'
