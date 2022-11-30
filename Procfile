@@ -1,1 +1,1 @@
-web: sh -c 'cd CoreBackend && gunicorn --workers=2 blightcnncore.wsgi:application --timeout 5'
+web: sh -c 'cd CoreBackend && gunicorn --workers=3 blightcnncore.wsgi:application'
