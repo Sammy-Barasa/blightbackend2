@@ -164,6 +164,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://blightdetectionai.netlify.app",
+    "https://blightdetectionai.netlify.app/"
 ]
 
 CORS_ALLOW_METHODS = list(default_methods)
@@ -181,11 +182,12 @@ CORS_ALLOW_HEADERS = [
 
 CSRF_TRUSTED_ORIGINS = [
     'https://blightdetectionai.netlify.app',
+    'https://blightdetectionai.netlify.app/',
     'http://localhost:3000',
 ]
 
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ORIGIN_WHITELIST = ['localhost:3000','workrecordmanager.netlify.app','blightdetectionai.netlify.app']
+CORS_ORIGIN_WHITELIST = ['localhost:3000','workrecordmanager.netlify.app','blightdetectionai.netlify.app','https://blightdetectionai.netlify.app/']
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10485761
