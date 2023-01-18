@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 from corsheaders.defaults import default_methods
+from corsheaders.defaults import default_headers
 from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -58,7 +59,7 @@ MIDDLEWARE = [
     # cors middleware
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'corsheaders.middleware.CorsPostCsrfMiddleware',
+    # 'corsheaders.middleware.CorsPostCsrfMiddleware',
 ]
 
 ROOT_URLCONF = 'blightcnncore.urls'
@@ -163,31 +164,30 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # django-course-header
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://blightdetectionai.netlify.app",
-    "https://blightdetectionai.netlify.app/"
+    "https://blightdetectionai.netlify.app"
 ]
 
 CORS_ALLOW_METHODS = list(default_methods)
 
-CORS_ALLOW_HEADERS = [
-    'accept',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
-]
+CORS_ALLOW_HEADERS =CORS_ALLOW_HEADERS = list(default_headers) 
+# [
+#     'accept',
+#     'accept-encoding',
+#     'authorization',
+#     'content-type',
+#     'origin',
+#     'user-agent',
+#     'x-csrftoken',
+#     'x-requested-with',
+# ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://blightdetectionai.netlify.app',
-    'https://blightdetectionai.netlify.app/',
     'http://localhost:3000',
 ]
 
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ORIGIN_WHITELIST = ['localhost:3000','workrecordmanager.netlify.app','blightdetectionai.netlify.app','https://blightdetectionai.netlify.app/']
+# CORS_ORIGIN_WHITELIST = ['localhost:3000','workrecordmanager.netlify.app','blightdetectionai.netlify.app','https://blightdetectionai.netlify.app/']
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10485761
