@@ -1,0 +1,1 @@
+web: gunicorn blightcnncore.wsgi:application --log-file
